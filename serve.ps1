@@ -2,14 +2,15 @@
 # Запуск:  powershell -ExecutionPolicy Bypass -File serve.ps1
 # Остановка: Ctrl+C в этом окне.
 
-$root = Split-Path -Parent $MyInvocation.MyCommand.Path
+$root = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) "public"
 $port = 8080
 
 $mime = @{
   ".html"="text/html; charset=utf-8"; ".css"="text/css; charset=utf-8";
   ".js"="application/javascript; charset=utf-8"; ".json"="application/json";
   ".png"="image/png"; ".jpg"="image/jpeg"; ".jpeg"="image/jpeg";
-  ".svg"="image/svg+xml"; ".ico"="image/x-icon"; ".webp"="image/webp"
+  ".svg"="image/svg+xml"; ".ico"="image/x-icon"; ".webp"="image/webp";
+  ".mp4"="video/mp4"; ".webm"="video/webm"; ".txt"="text/plain; charset=utf-8"
 }
 
 $listener = New-Object System.Net.HttpListener
@@ -54,7 +55,7 @@ while ($listener.IsListening) {
       if ($name -match '^[a-z0-9_-]+\.jpg$') {
         $ms = New-Object System.IO.MemoryStream
         $ctx.Request.InputStream.CopyTo($ms)
-        $dir = Join-Path $root "assets\img\poster"
+        $dir = Join-Path $root "assets/img/poster"
         if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Path $dir | Out-Null }
         [System.IO.File]::WriteAllBytes((Join-Path $dir $name), $ms.ToArray())
         $ctx.Response.StatusCode = 200
