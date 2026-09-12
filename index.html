@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assalam Travel — умра из Западного Казахстана</title>
+<meta name="description" content="Умра и хадж из Актау, Атырау, Орала и Актобе. Перелёт, виза, отели рядом с Харамом, трансферы и руководители, которые говорят на казахском и русском. Сопровождение 24/7.">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0A1526">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF7F1">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+
+<!-- Превью для WhatsApp, Telegram и соцсетей.
+     Пути относительные — работают на любом домене. Когда домен будет
+     подключён, замените их на абсолютные (https://домен/assets/img/og.jpg)
+     и добавьте <link rel="canonical">: часть сервисов не умеет
+     разворачивать относительные адреса. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Assalam Travel">
+<meta property="og:title" content="Assalam Travel — умра из Западного Казахстана">
+<meta property="og:description" content="Перелёт, виза, отели у Харама и руководитель, который говорит на вашем языке. Вылеты из Актау, Атырау, Орала и Актобе.">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:locale:alternate" content="kk_KZ">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Assalam Travel — умра из Западного Казахстана">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<!-- Фон героя — самая крупная картинка первого экрана. Он приходит из CSS,
+     поэтому браузер находит его поздно; preload возвращает ему приоритет. -->
+<link rel="preload" as="image" href="assets/img/hero-desktop.jpg" media="(min-width:601px)">
+<link rel="preload" as="image" href="assets/img/hero-mobile.jpg" media="(max-width:600px)">
+</head>
+<body>
+<script>
+/* Тема и класс js ставятся до первой отрисовки — иначе страница моргнёт */
+(function () {
+  var r = document.documentElement;
+  r.className = 'js';
+  var t = null;
+  try { t = localStorage.getItem('assalam-theme'); } catch (e) {}
+  if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  r.setAttribute('data-theme', t);
+})();
+</script>
+
+<a class="skip" href="#book" data-i18n="skip">Перейти к подбору вылета</a>
+
+<!-- ============ ШАПКА ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Assalam Travel">
+      <img src="assets/img/logo-full.png" alt="Assalam Travel" width="560" height="240">
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#about" data-i18n="nav.about">О нас</a>
+      <a href="#types" data-i18n="nav.types">Виды туров</a>
+      <a href="#deps" data-i18n="nav.deps">Вылеты</a>
+      <a href="#journey" data-i18n="nav.journey">Как проходит</a>
+      <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      <a href="#contact" data-i18n="nav.contact">Контакты</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="theme-toggle" id="themeBtn" type="button" aria-label="Включить светлую тему">
+        <svg class="t-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <svg class="t-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+      </button>
+      <div class="langsw" role="group" aria-label="Тіл / Язык">
+        <button type="button" data-lang-btn="kz" aria-pressed="false">ҚАЗ</button>
+        <button type="button" data-lang-btn="ru" aria-pressed="true">РУС</button>
+      </div>
+      <span class="nav-phone">+7 777 829 90 99</span>
+      <a href="#book" class="btn btn-gold" style="padding:11px 20px" data-i18n="cta.pick">Подобрать вылет</a>
+      <button class="burger" aria-label="Меню" aria-expanded="false" id="burger">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" data-i18n="nav.about">О нас</a>
+    <a href="#types" data-i18n="nav.types">Виды туров</a>
+    <a href="#deps" data-i18n="nav.deps">Вылеты</a>
+    <a href="#journey" data-i18n="nav.journeyLong">Как проходит умра</a>
+    <a href="#reviews" data-i18n="nav.reviews">Отзывы</a>
+    <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+    <a href="#contact" data-i18n="nav.contact">Контакты</a>
+  </div>
+</header>
+
+<!-- ============ ГЕРОЙ ============ -->
+<a id="top"></a>
+<section class="hero">
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <svg class="sky-body moon" viewBox="0 0 100 100" aria-hidden="true" fill="none">
+    <path d="M62 8a44 44 0 1 0 0 84A54 54 0 0 1 62 8Z" fill="rgba(232,191,107,.18)" stroke="rgba(232,191,107,.55)" stroke-width="1"/>
+  </svg>
+  <svg class="sky-body sun" viewBox="0 0 100 100" aria-hidden="true" fill="none">
+    <circle cx="50" cy="50" r="29" fill="rgba(232,191,107,.24)" stroke="rgba(160,112,31,.75)" stroke-width="1.8"/>
+    <g stroke="rgba(160,112,31,.62)" stroke-width="1.8" stroke-linecap="round">
+      <path d="M50 14V3M50 86v11M14 50H3M86 50h11M25 25l-7.8-7.8M75 75l7.8 7.8M75 25l7.8-7.8M25 75l-7.8 7.8"/>
+    </g>
+  </svg>
+  <div class="wrap hero-in">
+    <div>
+      <p class="talbiya">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ
+        <small data-i18n="hero.talbiya">Ляббайка Аллахумма Ляббайк — «Вот я перед Тобой, о Аллах»</small>
+      </p>
+      <h1 data-i18n="hero.h1">Путь к <em>Каабе</em><br>начинается здесь</h1>
+      <p class="lead" data-i18n="hero.lead">Умра — из Западного Казахстана к святыням. Перелёт, отели у Харама, трансферы и руководители, которые говорят на казахском и русском.</p>
+      <div class="hero-cta">
+        <a href="#book" class="btn btn-gold">
+          <svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l3.5 3.9-2.4 2.4-2-.4-1 1 3.4 1.9 1.9 3.4 1-1-.4-2 2.4-2.4 3.9 3.5a.5.5 0 0 0 .8-.5Z"/></svg>
+          <span data-i18n="cta.pick">Подобрать вылет</span>
+        </a>
+        <a href="https://wa.me/77778299099" class="btn btn-ghost-night" target="_blank" rel="noopener" data-i18n="cta.wa">Написать в WhatsApp</a>
+      </div>
+      <p class="hero-note">
+        <svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span data-i18n="hero.note">Отвечаем на заявку в течение 30 минут</span>
+      </p>
+    </div>
+
+    <div class="pass" aria-label="Ближайший вылет">
+      <div class="pass-head">
+        <span class="lab" data-i18n="pass.lab">Ближайший вылет</span>
+        <span class="seats"><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span data-i18n="pass.seats">осталось 8 мест</span></span>
+      </div>
+      <div class="pass-body">
+        <div class="pass-route">
+          <span data-i18n="pass.from">Актау</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 12h18M14 6l6 6-6 6"/></svg>
+          <span data-i18n="pass.to">Медина</span>
+        </div>
+        <p class="pass-sub" data-i18n="pass.sub">через Дубай · возвращение из Джидды · группа с руководителем</p>
+        <div class="pass-grid">
+          <div><div class="k" data-i18n="pass.kDates">Даты</div><div class="v" data-i18n="pass.vDates">12–22 октября</div></div>
+          <div><div class="k" data-i18n="pass.kNights">Ночей</div><div class="v" data-i18n="pass.vNights">10 · 4 в Медине</div></div>
+          <div><div class="k" data-i18n="pass.kMedina">Медина</div><div class="v">Frontel Al Harithia 4★</div></div>
+          <div><div class="k" data-i18n="pass.kMecca">Мекка</div><div class="v">Fajr Al Badea 4★</div></div>
+        </div>
+        <div class="pass-foot">
+          <div class="pass-price">
+            <div class="k" data-i18n="pass.priceK">Стоимость от</div>
+            <div class="v">$1&thinsp;690<small data-i18n="pass.per"> / чел.</small></div>
+          </div>
+          <a href="#book" class="btn btn-gold" style="padding:12px 22px" data-pick="oct-std" data-i18n="pass.book">Забронировать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПОЛОСА ДОВЕРИЯ ============ -->
+<div class="proof">
+  <div class="wrap proof-in">
+    <div class="proof-item"><span class="n" data-to="1200" data-suffix="+">1 200+</span><span class="t" data-i18n="proof.1">паломников</span></div>
+    <span class="proof-dot"></span>
+    <div class="proof-item"><span class="n" data-to="4">4</span><span class="t" data-i18n="proof.2">года опыта</span></div>
+    <span class="proof-dot"></span>
+    <div class="proof-item"><span class="n" data-to="4">4</span><span class="t" data-i18n="proof.3">города вылета</span></div>
+    <span class="proof-dot"></span>
+    <div class="proof-item"><span class="n">24/7</span><span class="t" data-i18n="proof.4">на связи</span></div>
+  </div>
+</div>
+
+<!-- ============ О КОМПАНИИ ============ -->
+<section class="cream-sec" id="about">
+  <div class="wrap about-wrap">
+    <div class="about-lead reveal">
+      <h2 data-i18n="about.h2">О <em>компании</em></h2>
+      <p data-i18n="about.p">Совершите благословенное путешествие к Священным местам вместе с «Assalam Travel». Мы организуем поездки на умру и хадж для паломников из Западного Казахстана, помогая пройти весь путь — от подготовки к поездке до возвращения домой.</p>
+      <p data-i18n="about.p2">Помогаем организовать паломничество в Мекку и Медину, уделяя внимание комфорту, безопасности и сопровождению паломников на каждом этапе.</p>
+      <p class="about-motto" data-i18n="about.motto">Ваше поклонение — наша забота.</p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="n" data-to="1200" data-suffix="+">1 200+</div><div class="t" data-i18n="about.s1">паломников</div></div>
+        <div class="about-stat"><div class="n" data-to="4">4</div><div class="t" data-i18n="about.s2">года опыта</div></div>
+        <div class="about-stat"><div class="n" data-to="99" data-suffix="%">99%</div><div class="t" data-i18n="about.s3">довольных</div></div>
+      </div>
+    </div>
+    <div class="about-photo reveal"><img src="assets/img/about.jpg" data-i18n-alt="alt.about" alt="Паломники совершают таваф вокруг Каабы" loading="lazy" width="1000" height="750"></div>
+  </div>
+</section>
+
+<!-- ============ ВИДЫ ТУРОВ ============ -->
+<section class="dawn" id="types">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin:0 auto 46px">
+      <h2 data-i18n="types.h2">Виды <em>туров</em></h2>
+      <p style="margin-left:auto;margin-right:auto" data-i18n="types.p">Выберите формат, который подходит именно вам — в группе земляков или по индивидуальной программе.</p>
+    </div>
+    <div class="types">
+      <article class="type reveal">
+        <div class="type-photo" style="background-image:url('assets/img/type-group.jpg')"></div>
+        <div class="type-body">
+          <h3 data-i18n="types.g.h">Групповая умра</h3>
+          <p data-i18n="types.g.p">Вылет в составе группы 20–35 человек с руководителем. Самый спокойный вариант для первой поездки.</p>
+          <ul class="type-feats">
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.g.1">Руководитель рядом на всех обрядах</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.g.2">Готовая программа и зиярат</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.g.3">Джамаат из земляков</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.g.4">Оптимальная стоимость</span></li>
+          </ul>
+          <div class="type-cta">
+            <a href="#book" class="btn btn-deep" data-i18n="cta.pickTour">Подобрать тур</a>
+            <a href="https://wa.me/77778299099" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="cta.wa">Написать в WhatsApp</a>
+          </div>
+        </div>
+      </article>
+      <article class="type reveal">
+        <div class="type-photo" style="background-image:url('assets/img/type-solo.jpg')"></div>
+        <div class="type-body">
+          <h3 data-i18n="types.i.h">Семейная и индивидуальная</h3>
+          <p data-i18n="types.i.p">Свои даты, отель и темп. Номер на семью или личный руководитель — под ваши пожелания.</p>
+          <ul class="type-feats">
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.i.1">Личный руководитель</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.i.2">Семейные номера у Харама</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.i.3">Коляски и помощь пожилым</span></li>
+            <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="types.i.4">Любые даты вылета</span></li>
+          </ul>
+          <div class="type-cta">
+            <a href="#book" class="btn btn-deep" data-i18n="cta.pickTour">Подобрать тур</a>
+            <a href="https://wa.me/77778299099" class="btn btn-ghost" target="_blank" rel="noopener" data-i18n="cta.wa">Написать в WhatsApp</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ВЫЛЕТЫ ============ -->
+<section class="cream-sec" id="deps">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="deps.h2">Ближайшие <em>вылеты</em></h2>
+      <p data-i18n="deps.p">Группы этого сезона: перелёт, отели у Харама, трансферы, зиярат и опытный руководитель — всё включено в стоимость.</p>
+    </div>
+    <div class="deps">
+      <article class="dep reveal">
+        <div class="dep-top" style="background-image:linear-gradient(180deg,rgba(7,15,28,.15),rgba(7,15,28,.9)),url('assets/img/dep-1.jpg')">
+          <div class="dep-tier" data-i18n="deps.1.tier">Стандарт</div>
+          <div class="dep-route"><span data-i18n="deps.1.from">Актау</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 12h18M14 6l6 6-6 6"/></svg> <span data-i18n="pass.to">Медина</span></div>
+          <div class="dep-dates" data-i18n="deps.1.dates">12–22 октября · через Дубай</div>
+          <span class="seat-pill"><svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg><span data-i18n="deps.1.seats">8 мест</span></span>
+        </div>
+        <div class="dep-body">
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><span data-i18n="deps.1.r1">Медина — <b>Frontel Al Harithia 4★</b>, Мекка — <b>Fajr Al Badea 4★</b></span></div>
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6z"/></svg><span data-i18n="deps.1.r2">До Харама — <b>7–10 минут пешком</b></span></div>
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg><span data-i18n="deps.1.r3">Завтраки · 10 ночей</span></div>
+        </div>
+        <div class="dep-foot">
+          <div class="dep-price">$1&thinsp;690<small data-i18n="deps.per">за паломника</small></div>
+          <a href="#book" class="btn btn-ghost" data-pick="oct-std" data-i18n="cta.choose">Выбрать</a>
+        </div>
+      </article>
+
+      <article class="dep reveal">
+        <div class="dep-top" style="background-image:linear-gradient(180deg,rgba(7,15,28,.15),rgba(7,15,28,.9)),url('assets/img/dep-2.jpg')">
+          <div class="dep-tier" data-i18n="deps.2.tier">Комфорт</div>
+          <div class="dep-route"><span data-i18n="deps.2.from">Атырау</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 12h18M14 6l6 6-6 6"/></svg> <span data-i18n="pass.to">Медина</span></div>
+          <div class="dep-dates" data-i18n="deps.2.dates">3–13 ноября · через Стамбул</div>
+          <span class="seat-pill"><svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg><span data-i18n="deps.2.seats">6 мест</span></span>
+        </div>
+        <div class="dep-body">
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><span data-i18n="deps.2.r1">Медина — <b>Al Eiman Royal 4★</b>, Мекка — <b>Al Kiswah Towers 4★</b></span></div>
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M5 17h14M6 17l1-9h10l1 9M9 8V6a3 3 0 0 1 6 0v2"/></svg><span data-i18n="deps.2.r2">До Харама — <b>5 минут</b>, есть шаттл</span></div>
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M4 4v16M4 12h9a4 4 0 0 0 0-8H4M16 20h5M18.5 20v-7"/></svg><span data-i18n="deps.2.r3">Завтрак и ужин · 10 ночей</span></div>
+        </div>
+        <div class="dep-foot">
+          <div class="dep-price">$1&thinsp;950<small data-i18n="deps.per">за паломника</small></div>
+          <a href="#book" class="btn btn-ghost" data-pick="nov-com" data-i18n="cta.choose">Выбрать</a>
+        </div>
+      </article>
+
+      <article class="dep reveal">
+        <div class="dep-top" style="background-image:linear-gradient(180deg,rgba(7,15,28,.15),rgba(7,15,28,.9)),url('assets/img/dep-3.jpg')">
+          <div class="dep-tier" data-i18n="deps.3.tier">Премиум · 5★</div>
+          <div class="dep-route"><span data-i18n="deps.3.from">Орал</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M2 12h18M14 6l6 6-6 6"/></svg> <span data-i18n="pass.to">Медина</span></div>
+          <div class="dep-dates" data-i18n="deps.3.dates">18–27 ноября · через Джидду</div>
+          <span class="seat-pill"><svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg><span data-i18n="deps.3.seats">4 места</span></span>
+        </div>
+        <div class="dep-body">
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><span data-i18n="deps.3.r1">Медина — <b>Anwar Al Madinah 5★</b>, Мекка — <b>Swissôtel Al Maqam 5★</b></span></div>
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6z"/></svg><span data-i18n="deps.3.r2"><b>Вход прямо в Харам</b> из отеля</span></div>
+          <div class="dep-row"><svg class="ic" viewBox="0 0 24 24"><path d="M4 4v16M4 12h9a4 4 0 0 0 0-8H4M16 20h5M18.5 20v-7"/></svg><span data-i18n="deps.3.r3">Полный пансион · 9 ночей</span></div>
+        </div>
+        <div class="dep-foot">
+          <div class="dep-price">$2&thinsp;780<small data-i18n="deps.per">за паломника</small></div>
+          <a href="#book" class="btn btn-ghost" data-pick="nov-prem" data-i18n="cta.choose">Выбрать</a>
+        </div>
+      </article>
+    </div>
+    <p class="deps-note" data-i18n="deps.note">Цены и даты — примеры сезона, уточняются при бронировании. Возможна оплата частями.</p>
+  </div>
+</section>
+
+<!-- ============ ПОДБОР ВЫЛЕТА ============ -->
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="book.h2">Подберите свой <em>вылет</em></h2>
+      <p data-i18n="book.p">Четыре шага — и мы соберём вашу поездку. Ничего не спишется: в конце вы оставляете заявку, а руководитель подтверждает детали.</p>
+    </div>
+    <div class="booker">
+      <div class="book-panel">
+        <div class="steps-nav" id="stepsNav">
+          <div class="snav active" data-s="0"><span class="num">1</span><span data-i18n="book.s1">Программа</span></div>
+          <div class="snav" data-s="1"><span class="num">2</span><span data-i18n="book.s2">Вылет</span></div>
+          <div class="snav" data-s="2"><span class="num">3</span><span data-i18n="book.s3">Паломники</span></div>
+          <div class="snav" data-s="3"><span class="num">4</span><span data-i18n="book.s4">Заявка</span></div>
+        </div>
+
+        <div class="step on" data-step="0">
+          <h3 data-i18n="book.q1">Выберите программу</h3>
+          <p class="hint" data-i18n="book.h1hint">Группы этого сезона. Можно выбрать индивидуальный тур — соберём под ваши даты.</p>
+          <div class="opts" id="progOpts"></div>
+        </div>
+
+        <div class="step" data-step="1">
+          <h3 data-i18n="book.q2">Город вылета</h3>
+          <p class="hint" data-i18n="book.h2hint">Организуем вылет из вашего города Западного Казахстана.</p>
+          <div class="cities" id="cityOpts"></div>
+        </div>
+
+        <div class="step" data-step="2">
+          <h3 data-i18n="book.q3">Сколько паломников</h3>
+          <p class="hint" data-i18n="book.h3hint">Укажите число взрослых и детей — рассчитаем общую стоимость.</p>
+          <div class="stepper-row">
+            <div class="sl"><b data-i18n="book.adults">Взрослые</b><span data-i18n="book.adultsAge">от 12 лет</span></div>
+            <div class="stepper"><button data-adj="adults" data-d="-1" aria-label="−">−</button><span class="cnt" id="cAdults">1</span><button data-adj="adults" data-d="1" aria-label="+">+</button></div>
+          </div>
+          <div class="stepper-row">
+            <div class="sl"><b data-i18n="book.kids">Дети</b><span data-i18n="book.kidsAge">до 12 лет</span></div>
+            <div class="stepper"><button data-adj="kids" data-d="-1" aria-label="−">−</button><span class="cnt" id="cKids">0</span><button data-adj="kids" data-d="1" aria-label="+">+</button></div>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <h3 data-i18n="book.q4">Ваши контакты</h3>
+          <p class="hint" data-i18n="book.h4hint">Руководитель свяжется в течение 30 минут, подтвердит места и ответит на вопросы.</p>
+          <div class="field"><label for="fName" data-i18n="book.lName">Как к вам обращаться</label><input id="fName" type="text" placeholder="Мұрат" data-i18n-ph="name" autocomplete="name"></div>
+          <div class="field"><label for="fPhone" data-i18n="book.lPhone">Телефон / WhatsApp</label><input id="fPhone" type="tel" placeholder="+7 ___ ___ __ __" data-i18n-ph="phone" autocomplete="tel"></div>
+          <label class="consent"><input id="fConsent" type="checkbox"><span data-i18n="book.consent">Согласен на обработку персональных данных и ответ в WhatsApp.</span></label>
+        </div>
+
+        <div class="step-actions">
+          <button class="link-back" id="btnBack" hidden><svg class="ic ic-sm" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg><span data-i18n="book.back">Назад</span></button>
+          <span></span>
+          <button class="btn btn-gold" id="btnNext">Далее</button>
+        </div>
+      </div>
+
+      <aside class="summary" id="summary">
+        <h4 data-i18n="sum.h">Ваша поездка</h4>
+        <p class="cap" data-i18n="sum.cap">Обновляется по мере выбора</p>
+        <div class="sum-row"><span class="k" data-i18n="sum.prog">Программа</span><span class="v" id="sProg">—</span></div>
+        <div class="sum-row"><span class="k" data-i18n="sum.city">Вылет из</span><span class="v" id="sCity">—</span></div>
+        <div class="sum-row"><span class="k" data-i18n="sum.pax">Паломников</span><span class="v" id="sPax">1</span></div>
+        <div class="sum-total"><span class="k" data-i18n="sum.total">Итого ориентировочно</span><span class="v" id="sTotal">—</span></div>
+        <div class="sum-dep" data-i18n="sum.dep">Бронь закрепляется депозитом <b>$300</b>, остаток — <b>частями до вылета</b>, без скрытых платежей.</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КАК ПРОХОДИТ УМРА ============ -->
+<section class="cream-sec journey" id="journey">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin:0 auto 52px">
+      <h2 data-i18n="journey.h2">Как проходит <em>умра</em></h2>
+      <p style="margin-left:auto;margin-right:auto" data-i18n="journey.p">Снято в наших поездках — от выезда из Медины до возвращения домой. Нажмите, чтобы открыть.</p>
+    </div>
+    <div class="jstrip reveal">
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j1.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j1.mp4#t=0.6" poster="assets/img/poster/j1.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.1">Тёплый привет из Медины!</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j2.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j2.mp4#t=0.6" poster="assets/img/poster/j2.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.2">Микат: берём намерение</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j3.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j3.mp4#t=0.6" poster="assets/img/poster/j3.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.3">Из Медины в Мекку</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j4.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j4.mp4#t=0.6" poster="assets/img/poster/j4.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.4">Останавливаемся поесть в пути</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j5.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j5.mp4#t=0.6" poster="assets/img/poster/j5.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.5">Лекция и разбор обрядов</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j6.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j6.mp4#t=0.6" poster="assets/img/poster/j6.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.6">Совершаем умру вместе</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j7.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j7.mp4#t=0.6" poster="assets/img/poster/j7.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.7">Экскурсия по Мекке</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/j8.mp4" aria-label="Открыть видео">
+          <video src="assets/video/j8.mp4#t=0.6" poster="assets/img/poster/j8.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="v.8">Возвращаемся домой</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЧТО ВХОДИТ ============ -->
+<section class="dawn">
+  <div class="wrap inc-wrap">
+    <div class="inc-lead reveal">
+      <h2 data-i18n="inc.h2">Всё включено — <em>без скрытых платежей</em></h2>
+      <p data-i18n="inc.p">Одна прозрачная стоимость на всю поездку, зафиксированная в договоре. Организацию берём на себя — вы сосредотачиваетесь на главном.</p>
+      <img class="inc-photo" src="assets/img/included.jpg" data-i18n-alt="alt.inc" alt="Кааба и Заповедная мечеть" loading="lazy" width="900" height="600">
+      <a href="#book" class="btn btn-deep" data-i18n="inc.cta">Рассчитать стоимость</a>
+    </div>
+    <ul class="inc-list reveal">
+      <li><svg class="ic" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8l3.5 3.9-2.4 2.4-2-.4-1 1 3.4 1.9 1.9 3.4 1-1-.4-2 2.4-2.4 3.9 3.5a.5.5 0 0 0 .8-.5Z"/></svg><div data-i18n="inc.1"><b>Авиаперелёт</b> из вашего города</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg><div data-i18n="inc.2"><b>Отели 4–5★</b> у Харама</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24"><path d="M5 17h14M6 17l1-9h10l1 9M9 8V6a3 3 0 0 1 6 0v2"/></svg><div data-i18n="inc.3"><b>Трансферы</b> и вся логистика</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24"><path d="M9 20l-5-5 5-5M15 4l5 5-5 5M13 3l-2 18"/></svg><div data-i18n="inc.4"><b>Виза</b> и все документы</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 7 9 18l-5-5"/><path d="M12 3a9 9 0 0 1 9 9"/></svg><div data-i18n="inc.5"><b>Мед. страховка</b> на весь срок</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><div data-i18n="inc.6"><b>Руководитель</b> — қазақша и русский</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5-4.9-2.6-4.9 2.6.9-5.5-4-3.9 5.5-.8z"/></svg><div data-i18n="inc.7"><b>Зиярат</b> к святым местам</div></li>
+      <li><svg class="ic" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 18 0M2 11h20M12 20v-6"/></svg><div data-i18n="inc.8"><b>Оплата частями</b> до вылета</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ ФОТО-ПОЛОСА ============ -->
+<section class="photo-band">
+  <div class="wrap">
+    <h2 data-i18n="band.h2">До Харама — <em>один шаг</em></h2>
+    <p data-i18n="band.p">Сотни земляков уже прошли этот путь с нами. Пусть следующим станете вы, иншаАллах.</p>
+    <a href="#book" class="btn btn-gold" data-i18n="cta.pick">Подобрать вылет</a>
+  </div>
+</section>
+
+<!-- ============ СОПРОВОЖДЕНИЕ ============ -->
+<section class="guide" id="guide">
+  <div class="wrap guide-in">
+    <div class="reveal">
+      <h2 data-i18n="guide.h2">Не турагентство, а <em>сопровождение</em></h2>
+      <p data-i18n="guide.p1">Для большинства наших паломников это первая умра. Руководитель группы сам совершал её много раз: знает расположение входов в Харам, время намазов и умеет спокойно объяснить обряд тому, кто впервые видит Каабу.</p>
+      <p data-i18n="guide.p2">Мы не оставляем паломника одного ни на один обряд. Если человек растерялся в потоке — рядом должен быть тот, кто говорит на его языке.</p>
+      <div class="who">
+        <span class="av"><img src="assets/img/favicon.png" alt="" aria-hidden="true"></span>
+        <div class="nm"><b data-i18n="guide.who">Команда Assalam Travel</b><span data-i18n="guide.role">руководители групп · Западный Казахстан</span></div>
+      </div>
+      <div class="guide-tags">
+        <span data-i18n="guide.t1">Қазақша · Орысша</span>
+        <span data-i18n="guide.t2">Встреча группы до вылета</span>
+        <span data-i18n="guide.t3">Разбор обрядов</span>
+        <span data-i18n="guide.t4">Помощь пожилым</span>
+      </div>
+    </div>
+    <div class="route-map reveal" aria-label="Маршрут паломника: Медина — Мекка">
+      <svg id="routeSvg" viewBox="0 0 400 400" fill="none" style="width:100%;height:100%">
+        <circle class="orbit" cx="200" cy="200" r="150" stroke="rgba(232,191,107,.16)" stroke-width="1"/>
+        <circle class="orbit" cx="200" cy="200" r="100" stroke="rgba(232,191,107,.1)" stroke-width="1"/>
+        <path id="routePath" d="M120 270 C 160 190, 240 210, 285 130" stroke="var(--gold)" stroke-width="1.6" stroke-dasharray="4 7" opacity=".85"/>
+        <g class="node">
+          <circle cx="120" cy="270" r="7" fill="var(--gold)"/>
+          <circle cx="120" cy="270" r="16" stroke="rgba(232,191,107,.4)" stroke-width="1"/>
+          <text x="120" y="305" fill="var(--on-night)" font-family="Spectral,serif" font-size="17" text-anchor="middle" data-i18n="map.medina">Медина</text>
+          <text x="120" y="323" fill="var(--on-night-soft)" font-family="Manrope,sans-serif" font-size="11" text-anchor="middle" data-i18n="map.medinaSub">зиярат · Масджид ан-Набави</text>
+        </g>
+        <g class="node">
+          <circle cx="285" cy="130" r="7" fill="var(--gold)"/>
+          <circle cx="285" cy="130" r="16" stroke="rgba(232,191,107,.4)" stroke-width="1"/>
+          <text x="285" y="103" fill="var(--on-night)" font-family="Spectral,serif" font-size="17" text-anchor="middle" data-i18n="map.mecca">Мекка</text>
+          <text x="285" y="86" fill="var(--on-night-soft)" font-family="Manrope,sans-serif" font-size="11" text-anchor="middle" data-i18n="map.meccaSub">таваф · умра</text>
+        </g>
+        <g id="twinkles"></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ОТЗЫВЫ ============ -->
+<section class="cream-sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 data-i18n="rev.h2">Что говорят <em>паломники</em></h2>
+      <p data-i18n="rev.p">Видеоотзывы наших паломников — без правок. Нажмите, чтобы открыть. Больше — в Instagram, в разделе «ПІКІРЛЕР».</p>
+    </div>
+    <div class="jstrip reveal">
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/r1.mp4" aria-label="Открыть видеоотзыв">
+          <video src="assets/video/r1.mp4#t=0.6" poster="assets/img/poster/r1.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="r.1">Отзыв после поездки</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/r2.mp4" aria-label="Открыть видеоотзыв">
+          <video src="assets/video/r2.mp4#t=0.6" poster="assets/img/poster/r2.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="r.2">Впечатления паломника</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/r3.mp4" aria-label="Открыть видеоотзыв">
+          <video src="assets/video/r3.mp4#t=0.6" poster="assets/img/poster/r3.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="r.3">Как прошла умра</figcaption>
+      </figure>
+      <figure class="jclip">
+        <button type="button" class="jopen" data-full="assets/video/r4.mp4" aria-label="Открыть видеоотзыв">
+          <video src="assets/video/r4.mp4#t=0.6" poster="assets/img/poster/r4.jpg" muted loop playsinline preload="none"></video>
+        </button>
+        <figcaption data-i18n="r.4">Слова благодарности</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ ВОПРОСЫ ============ -->
+<section class="dawn" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin:0 auto 48px">
+      <h2 data-i18n="faq.h2">Частые <em>вопросы</em></h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq"><button aria-expanded="false"><span data-i18n="faq.q1">Нужен ли опыт, если еду впервые?</span><span class="plus" aria-hidden="true"></span></button><div class="ans"><div class="ans-in"><p data-i18n="faq.a1">Нет. Большинство наших паломников едут впервые. Перед вылетом руководитель проводит встречу и разбирает каждый обряд по шагам, а в поездке идёт рядом и подсказывает. Достаточно желания и намерения.</p></div></div></div>
+      <div class="faq"><button aria-expanded="false"><span data-i18n="faq.q2">Какие документы нужны и кто оформляет визу?</span><span class="plus" aria-hidden="true"></span></button><div class="ans"><div class="ans-in"><p data-i18n="faq.a2">От вас — загранпаспорт со сроком действия не менее 6 месяцев на дату вылета и фото. Визу в Саудовскую Аравию, анкеты и бронирования оформляем мы. Прививка от менингита — по действующим требованиям, подскажем, где сделать.</p></div></div></div>
+      <div class="faq"><button aria-expanded="false"><span data-i18n="faq.q3">Можно ли поехать одному?</span><span class="plus" aria-hidden="true"></span></button><div class="ans"><div class="ans-in"><p data-i18n="faq.a3">Да. Вы будете в составе группы с руководителем, поселим с паломником того же пола. По правилам для женщин уточните ситуацию у нас лично: требования периодически меняются, и мы подскажем актуальные.</p></div></div></div>
+      <div class="faq"><button aria-expanded="false"><span data-i18n="faq.q4">Как устроена оплата?</span><span class="plus" aria-hidden="true"></span></button><div class="ans"><div class="ans-in"><p data-i18n="faq.a4">Место закрепляется депозитом $300. Остаток вносится частями до вылета — график согласуем индивидуально. Стоимость фиксируется в договоре и не меняется после оплаты депозита.</p></div></div></div>
+      <div class="faq"><button aria-expanded="false"><span data-i18n="faq.q5">Что делать, если потеряюсь в Хараме?</span><span class="plus" aria-hidden="true"></span></button><div class="ans"><div class="ans-in"><p data-i18n="faq.a5">Перед первым заходом руководитель показывает ориентиры, номер ворот и раздаёт карточку с адресом отеля и контактами на арабском. Группа заходит и выходит вместе, а связь с сопровождающим — круглосуточная.</p></div></div></div>
+      <div class="faq"><button aria-expanded="false"><span data-i18n="faq.q6">Возьмёте пожилого или маломобильного?</span><span class="plus" aria-hidden="true"></span></button><div class="ans"><div class="ans-in"><p data-i18n="faq.a6">Да, это большая часть наших паломников. Заранее бронируем коляску для тавафа и саъй, выбираем отель ближе ко входу в Харам и строим щадящий график зиярата. Сообщите об этом при заявке.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ КОНТАКТЫ ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="reveal">
+      <h2 data-i18n="con.h2">Готовы в <em>путь</em>?</h2>
+      <p class="lead" data-i18n="con.lead">Оставьте заявку или напишите напрямую — ответим в течение 30 минут и подберём вылет под вас.</p>
+      <div class="ways">
+        <a class="way" href="https://wa.me/77778299099" target="_blank" rel="noopener">
+          <span class="wic"><svg class="ic" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <span><span class="k" data-i18n="con.wa">WhatsApp / телефон</span><span class="v">+7 777 829 90 99</span></span>
+        </a>
+        <a class="way" href="https://instagram.com/assalam__travel" target="_blank" rel="noopener">
+          <span class="wic"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></span>
+          <span><span class="k" data-i18n="con.ig">Instagram</span><span class="v">@assalam__travel</span></span>
+        </a>
+        <a class="way" href="tel:+77778299099">
+          <span class="wic"><svg class="ic" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span><span class="k" data-i18n="con.hours">Ежедневно, 09:00 — 20:00</span><span class="v" data-i18n="con.call">Позвонить</span></span>
+        </a>
+      </div>
+    </div>
+    <div class="cform">
+      <h3 data-i18n="con.formH">Оставить заявку</h3>
+      <p class="cap"><svg class="ic ic-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="con.formCap">Ответим в течение 30 минут</span></p>
+      <div class="field"><label for="cName" data-i18n="con.lName">Имя</label><input id="cName" type="text" placeholder="Айжан" data-i18n-ph="lname" autocomplete="name"></div>
+      <div class="field"><label for="cPhone" data-i18n="con.lPhone">Телефон / WhatsApp</label><input id="cPhone" type="tel" placeholder="+7 ___ ___ __ __" data-i18n-ph="phone" autocomplete="tel"></div>
+      <div class="field"><label for="cWish" data-i18n="con.lWish">Пожелания (необязательно)</label><input id="cWish" type="text" placeholder="Даты, город вылета, число паломников" data-i18n-ph="wish"></div>
+      <label class="consent" style="margin-bottom:14px"><input id="cConsent" type="checkbox"><span data-i18n="con.consent">Согласен на обработку персональных данных.</span></label>
+      <button class="btn btn-gold" id="cSubmit" style="width:100%;margin-top:6px" data-i18n="con.submit">Отправить заявку</button>
+      <p id="cDone" style="display:none;margin-top:16px;color:var(--gold);font-size:14px;text-align:center" data-i18n="con.done">Рахмет! Мы открыли WhatsApp с готовым сообщением.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ПОДВАЛ ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Assalam Travel"><img src="assets/img/logo-full.png" alt="Assalam Travel" width="560" height="240"></a>
+        <p data-i18n="foot.about">Умра и хадж из Западного Казахстана с полным сопровождением: перелёт, виза, отели у Харама и руководитель, который говорит на вашем языке.</p>
+      </div>
+      <div class="foot-col">
+        <h5 data-i18n="foot.nav">Навигация</h5>
+        <a href="#about" data-i18n="nav.about">О нас</a>
+        <a href="#types" data-i18n="nav.types">Виды туров</a>
+        <a href="#deps" data-i18n="foot.deps">Ближайшие вылеты</a>
+        <a href="#book" data-i18n="cta.pick">Подобрать вылет</a>
+        <a href="#faq" data-i18n="nav.faq">Вопросы</a>
+      </div>
+      <div class="foot-col">
+        <h5 data-i18n="foot.contact">Связаться</h5>
+        <a href="tel:+77778299099">+7 777 829 90 99</a>
+        <a href="https://wa.me/77778299099" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://instagram.com/assalam__travel" target="_blank" rel="noopener">@assalam__travel</a>
+        <span data-i18n="con.hours">Ежедневно, 09:00 — 20:00</span>
+        <span data-i18n="foot.region">Западный Казахстан</span>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span data-i18n="foot.copy">© <span id="year">2026</span> Assalam Travel · Умра и хадж из Западного Казахстана</span>
+      <span class="demo" data-i18n="foot.demo">Демо-макет · контент, цены и даты — к согласованию</span>
+    </div>
+  </div>
+</footer>
+
+<!-- лайтбокс для видео -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" type="button" aria-label="Закрыть">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+</div>
+
+<a class="wa-float" href="https://wa.me/77778299099" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5v-.5c-.1-.2-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7.2 3.9z"/></svg>
+</a>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

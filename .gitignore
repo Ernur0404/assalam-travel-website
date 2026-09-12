@@ -1,0 +1,8 @@
+# сборочная папка и временные файлы
+.build/
+*.zip
+
+# системное
+Thumbs.db
+desktop.ini
+.DS_Store
