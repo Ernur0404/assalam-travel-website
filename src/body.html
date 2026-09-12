@@ -5,8 +5,9 @@
   r.className = 'js';
   var t = null;
   try { t = localStorage.getItem('assalam-theme'); } catch (e) {}
-  if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-  r.setAttribute('data-theme', t);
+  /* Первый заход — всегда ночь: с неё начинается сайт, светлую тему
+     посетитель включает сам, и дальше она уже запоминается. */
+  r.setAttribute('data-theme', t || 'dark');
 })();
 </script>
 
