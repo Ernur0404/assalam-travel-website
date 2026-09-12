@@ -311,10 +311,14 @@ function openWA(msg) {
   var panelWrap = document.querySelector('.book-panel');
   if (!panelWrap) return;
 
+  /* c — город вылета этой программы: он уже зашит в её название,
+     поэтому на втором шаге подставляем его сам, чтобы в заявку
+     не ушло «Комфорт · Атырау → Медина» и рядом «Вылет из: Актау».
+     Поменять город руками всё равно можно. */
   var PROGRAMS = [
-    { id: 'oct-std',  t: 'p.oct.t',  d: 'p.oct.d',  p: 1690 },
-    { id: 'nov-com',  t: 'p.nov.t',  d: 'p.nov.d',  p: 1950 },
-    { id: 'nov-prem', t: 'p.prem.t', d: 'p.prem.d', p: 2780 },
+    { id: 'oct-std',  t: 'p.oct.t',  d: 'p.oct.d',  p: 1690, c: 'aktau'  },
+    { id: 'nov-com',  t: 'p.nov.t',  d: 'p.nov.d',  p: 1950, c: 'atyrau' },
+    { id: 'nov-prem', t: 'p.prem.t', d: 'p.prem.d', p: 2780, c: 'oral'   },
     { id: 'ind',      t: 'p.ind.t',  d: 'p.ind.d',  p: 0 }
   ];
   var CITIES = [
@@ -331,6 +335,14 @@ function openWA(msg) {
   var btnNext = $('#btnNext'), btnBack = $('#btnBack');
   var progOpts = $('#progOpts'), cityOpts = $('#cityOpts');
 
+  function pickProgram(pr) {
+    state.prog = pr;
+    if (pr.c) {
+      CITIES.forEach(function (ct) { if (ct.id === pr.c) state.city = ct; });
+    }
+    paint(); update();
+  }
+
   function buildOptions() {
     progOpts.innerHTML = '';
     PROGRAMS.forEach(function (pr) {
@@ -343,7 +355,7 @@ function openWA(msg) {
         '<span class="opt-radio"></span></div>';
       el.querySelector('.opt-t').textContent = T(pr.t);
       el.querySelector('.opt-d').textContent = T(pr.d);
-      el.addEventListener('click', function () { state.prog = pr; paint(); update(); });
+      el.addEventListener('click', function () { pickProgram(pr); });
       progOpts.appendChild(el);
     });
     cityOpts.innerHTML = '';
@@ -422,7 +434,7 @@ function openWA(msg) {
     b.addEventListener('click', function () {
       var pr = null;
       PROGRAMS.forEach(function (p) { if (p.id === b.dataset.pick) pr = p; });
-      if (pr) { state.prog = pr; paint(); update(); go(1); }
+      if (pr) { pickProgram(pr); go(1); }
     });
   });
 
