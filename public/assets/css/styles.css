@@ -569,12 +569,15 @@ footer{background:#060E1B;color:var(--on-night-soft);padding:60px 0 30px}
   .brand img{height:46px}
   .talbiya small{letter-spacing:.07em;font-size:12px}
   .ts-feats{flex-direction:column;align-items:flex-start;width:max-content;margin-left:auto;margin-right:auto;gap:12px}
-  /* вертикальный кадр Мечети Пророка */
+  /* Вертикальный кадр Мечети Пророка. Кадрирование зашито в сам файл:
+     по высоте картинка ровно закрывает герой, поэтому сдвигать её
+     через background-position бесполезно — двигать надо кроп исходника
+     (оригинал целиком лежит в source/hero-mobile-full.jpg). */
   .hero{background:linear-gradient(180deg,rgba(7,15,28,.34) 0%,rgba(7,15,28,.46) 38%,rgba(7,15,28,.48) 82%,rgba(7,15,28,.92) 100%),url("../img/hero-mobile.jpg");
-    background-size:auto,cover;background-position:center,center 22%;background-repeat:no-repeat}
+    background-size:auto,cover;background-position:center,center;background-repeat:no-repeat}
   :root[data-theme="light"] .hero{
     background:linear-gradient(180deg,rgba(250,247,241,.6) 0%,rgba(250,247,241,.82) 45%,rgba(250,247,241,.96) 100%),url("../img/hero-mobile.jpg");
-    background-size:auto,cover;background-position:center,center 22%;background-repeat:no-repeat}
+    background-size:auto,cover;background-position:center,center;background-repeat:no-repeat}
   .book-panel,.summary,.cform{padding:22px}
   /* «Навигация» и «Связаться» стоят рядом, логотип с описанием — над ними */
   .foot-top{grid-template-columns:1fr 1fr;gap:26px 22px;padding-bottom:22px}
